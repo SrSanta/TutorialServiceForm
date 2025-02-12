@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { EventosService } from '../services/eventos.service';
-import { Evento } from '../models/evento.model';
+import { EventosService } from '../../services/eventos.service';
+import { Evento } from '../../models/evento.model';
 
 @Component({
   selector: 'app-listado',
