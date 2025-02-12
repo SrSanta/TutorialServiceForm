@@ -1,19 +1,36 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { Evento } from '../models/evento.model';
 import { HttpClient } from '@angular/common/http';
+import { Evento } from '../models/evento.model';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-
 export class EventosService {
-    private eventosUrl = 'http://localhost:3000/eventos';
 
-    constructor(private http: HttpClient) { }
+  private url = 'http://localhost:3000/eventos';
 
-    guardarEvento(evento: Evento): Observable<Evento> {
-        return this.http.post<Evento>(this.eventosUrl, evento);
-    }
+  constructor(private http: HttpClient) { }
+  
+  getEventos(){
+    return this.http.get<Evento[]>(this.url);
+  }
+
+  getEvento(id: number){
+    return this.http.get<Evento>(`${this.url}/${id}`);
+  }
+
+  addEvento(evento: Evento){
+    return this.http.post(this.url, evento);
+  }
+
+  updateEvento(evento: Evento){
+    return this.http.put(`${this.url}/${evento.id}`, evento);
+  }
+
+  deleteEvento(id: number){
+    return this.http.delete(`${this.url}/${id}`);
+  }
+
 }
 //json-server --watch db.json
