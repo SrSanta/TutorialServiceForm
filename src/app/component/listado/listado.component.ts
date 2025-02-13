@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { EventosService } from '../../services/eventos.service';
 import { Evento } from '../../models/evento.model';
+import { EmpleadosService } from '../../services/empleado.service';
 
 @Component({
   selector: 'app-listado',
@@ -12,11 +13,17 @@ export class ListadoComponent {
 
   eventos: Evento[] = [];
 
-  constructor(private eventoService: EventosService) { }
+  constructor(private eventosService: EventosService, private empleadoService: EmpleadosService) {}
 
   ngOnInit(): void {
-    this.eventoService.getEventos().subscribe((evento) => {
-      this.eventos = evento;
+    this.eventosService.getEventos().subscribe((eventos) => {
+      this.eventos = eventos;
+    });
+    console.log(this.eventos);
+  }
+
+  getEvento(id: number) {
+    this.eventosService.getEvento(id).subscribe((evento) => {
       console.log(evento);
     });
   }

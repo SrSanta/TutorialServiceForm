@@ -1,53 +1,35 @@
 {
   "eventos": [
     {
-      "id": "1",
-      "nombre": "Sumerfest",
-      "fecha": "2021-07-01",
-      "empleado": 1,
-      "descripcion": "Festival de verano",
-      "categoria": "log",
-      "creacion": "2025-02-10T14:30:00Z"
-    },
-    {
-      "id": "2",
-      "nombre": "Tech Expo",
-      "fecha": "2022-05-15",
-      "empleado": 2,
-      "descripcion": "Exposición de tecnología",
+      "id": 1,
+      "empleadoNombre": "Pepe",
+      "nombre": "Comer",
+      "descripcion": "ham",
       "categoria": "warn",
-      "creacion": "2025-02-10T14:30:00Z"
-    },
-    {
-      "id": "3",
-      "nombre": "Fiesta de Navidad",
-      "fecha": "2023-12-20",
-      "empleado": 3,
-      "descripcion": "Celebración navideña para empleados",
-      "categoria": "error",
-      "creacion": "2025-02-10T14:30:00Z"
+      "fecha": "2025-02-15",
+      "creacion": "2025-02-13T08:52:55.138Z"
     }
   ],
   "empleados": [
     {
       "id": "1",
-      "nombre": "Juan",
+      "nombre": "Pepe",
       "apellido": "Perez",
       "email": "a@a.com",
       "departamento": "comidas"
     },
     {
       "id": "2",
-      "nombre": "Maria",
+      "nombre": "Logan",
       "apellido": "Lopez",
-      "email": "maria.lopez@email.com",
+      "email": "l.lopez@email.com",
       "departamento": "tecnología"
     },
     {
       "id": "3",
-      "nombre": "Carlos",
+      "nombre": "Ramon",
       "apellido": "Ramirez",
-      "email": "carlos.ramirez@email.com",
+      "email": "r.ramirez@email.com",
       "departamento": "recursos humanos"
     }
   ]

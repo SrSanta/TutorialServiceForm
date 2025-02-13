@@ -1,7 +1,41 @@
-<p>listado works!</p>
-<h2>Lista de eventos</h2>
-<ul>
-    @for (evento of eventos; track evento.id) {
-        <li>{{evento.id}} -- {{evento.nombre}} - {{evento.categoria}} - {{evento.descripcion}} - {{evento.empleadoId}} - {{evento.fecha}}</li>
-    }
-</ul>
+<h2 class="text-center my-4 text-primary">Lista Eventos</h2>
+@if (eventos.length != 0) {
+  <div class="table-responsive">
+    <table class="table table-striped text-center">
+      <thead class="table-light">
+        <tr>
+          <th>Empleado</th>
+          <th>Categoría</th>
+          <th>Título</th>
+          <th>Descripción</th>
+          <th>Fecha</th>
+          <th>Fecha Creacion</th>
+        </tr>
+      </thead>
+      <tbody class="table-light">
+        @for (evento of eventos; track evento.id) {
+        <tr>
+          <td>{{ evento.empleadoNombre }}</td>
+          <td>
+            @if (evento.categoria === 'log') {
+              <span class="badge text-bg-primary">Log</span>
+            }
+            @if (evento.categoria === 'warn') {
+              <span class="badge text-bg-warning">Warn</span>
+            }
+            @if (evento.categoria === 'error') {
+              <span class="badge text-bg-danger">Error</span>
+            }
+          </td>
+          <td class="bg-light">{{ evento.nombre }}</td>
+          <td>{{ evento.descripcion }}</td>
+          <td>{{ evento.fecha }}</td>
+          <td>{{ evento.creacion }}</td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+} @else {
+  <div class="alert text-center text-bg-warning">No hay eventos</div>
+}

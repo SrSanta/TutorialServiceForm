@@ -4,7 +4,7 @@ import { ListadoComponent } from './component/listado/listado.component';
 import { FormularioComponent } from './component/formulario/formulario.component';
 
 export const routes: Routes = [
-    { path: '', component: EntradaComponent },
+  { path: '', component: EntradaComponent },
   { path: 'listado', component: ListadoComponent },
-  { path: 'formulario', component: FormularioComponent }
+  { path: 'formulario', component: FormularioComponent },
 ];
