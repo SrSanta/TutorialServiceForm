@@ -35,9 +35,22 @@ export class FormularioComponent {
     this.empleadosService.getEmpleados().subscribe((empleados) => {
       this.empleados = empleados;
     });
+  
     this.eventosService.getEventos().subscribe((eventos) => {
       this.eventos = eventos;
     });
+  
+    if (typeof window !== 'undefined') {
+      const nombreGuardado = localStorage.getItem('nombre');
+      if (nombreGuardado) {
+        this.nombre = nombreGuardado;
+        this.form.patchValue({ empleado: nombreGuardado });
+      } else {
+        this.nombre = "";
+        localStorage.setItem('nombre', this.nombre);
+        
+      }
+    }
   }
 
   addEvento(form: FormGroup) {
@@ -50,6 +63,7 @@ export class FormularioComponent {
 
   cambiarNombre(){
     this.nombre =this.form.value.empleado;
+    localStorage.setItem('nombre', this.nombre);
     this.observablesService.setNombreTitulo(this.nombre);
   }
 
