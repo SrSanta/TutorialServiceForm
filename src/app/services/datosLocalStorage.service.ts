@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+/* import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { DatosJSON } from '../models/datosJSON.model';
 
@@ -22,4 +22,4 @@ export class DatosLocalStorageService {
         console.log('Datos ya cargados');
     }
   }
-}
+} */
