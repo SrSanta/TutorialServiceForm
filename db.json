@@ -8,6 +8,24 @@
       "categoria": "warn",
       "fecha": "2025-02-15",
       "creacion": "2025-02-13T08:52:55.138Z"
+    },
+    {
+      "id": 2,
+      "empleadoNombre": "Logan",
+      "nombre": "vale",
+      "descripcion": "buenas",
+      "categoria": "log",
+      "fecha": "2025-02-19",
+      "creacion": "2025-02-15T17:11:12.843Z"
+    },
+    {
+      "id": 3,
+      "empleadoNombre": "Ramon",
+      "nombre": "error ramon",
+      "descripcion": "ruedas",
+      "categoria": "error",
+      "fecha": "2025-03-01",
+      "creacion": "2025-02-15T17:11:31.053Z"
     }
   ],
   "empleados": [

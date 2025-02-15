@@ -25,6 +25,9 @@ export class ObservablesService {
     curError$ = this.countError.asObservable();
     private nombreTitulo = new BehaviorSubject<string>('');
     curNombreTitulo$ = this.nombreTitulo.asObservable();
+    private listadoEventos = new BehaviorSubject<any[]>([]);
+    curListado$ = this.listadoEventos.asObservable();
+
 
     private initValoresContadores() {
         this.eventoService.getEventos().subscribe((eventos) => {
@@ -62,5 +65,17 @@ export class ObservablesService {
 
     setNombreTitulo(nombre: string) {
         this.nombreTitulo.next(nombre);
+    }
+
+    cargarEventosLog(eventos: any[]) {
+        this.listadoEventos.next(eventos.filter((evento) => evento.categoria === 'log'));
+    }
+
+    cargarEventosWarn(eventos: any[]) {
+        this.listadoEventos.next(eventos.filter((evento) => evento.categoria === 'warn'));
+    }
+
+    cargarEventosError(eventos: any[]) {
+        this.listadoEventos.next(eventos.filter((evento) => evento.categoria === 'error'));
     }
 }
