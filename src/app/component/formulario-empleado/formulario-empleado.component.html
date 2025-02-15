@@ -1,0 +1,31 @@
+<form [formGroup]="formEmp" (submit)="submit()" class="container mt-5 p-4 bg-white shadow rounded">
+    <h2 class="mb-4 text-center text-primary">Registro de Empleado</h2>
+  
+    <div class="card p-4 mt-4 border-0 shadow-sm">
+      <h5 class="card-title text-center text-secondary">Datos del Empleado</h5>
+  
+      <div class="mb-3">
+        <label for="titulo" class="form-label fw-bold">Nombre:</label>
+        <input type="text" id="titulo" class="form-control" placeholder="nombre" formControlName="nombre">
+      </div>
+  
+      <div class="mb-3">
+        <label for="descripcion" class="form-label fw-bold">Apellido:</label>
+        <input type="text" id="apellido" class="form-control" rows="3" placeholder="apellido" formControlName="apellido">
+      </div>
+  
+      <div class="mb-3">
+        <label for="email" class="form-label fw-bold">Email:</label>
+        <input type="email" id="email" class="form-control" placeholder="Email" formControlName="email">
+      </div>
+
+      <div class="mb-3">
+        <label for="departamento" class="form-label fw-bold">Departamento:</label>
+        <input type="text" id="departamento" class="form-control" placeholder="departamento" formControlName="departamento">
+      </div>
+    </div>
+  
+    <div class="text-center mt-4">
+      <button type="submit" class="btn btn-primary px-4 py-2 fw-bold shadow-sm">Registrar Empleado</button>
+    </div>
+  </form>

@@ -10,7 +10,7 @@
       "creacion": "2025-02-13T08:52:55.138Z"
     },
     {
-      "id": 2,
+      "id": "2",
       "empleadoNombre": "Logan",
       "nombre": "vale",
       "descripcion": "buenas",
@@ -19,7 +19,7 @@
       "creacion": "2025-02-15T17:11:12.843Z"
     },
     {
-      "id": 3,
+      "id": "3",
       "empleadoNombre": "Ramon",
       "nombre": "error ramon",
       "descripcion": "ruedas",
@@ -49,6 +49,13 @@
       "apellido": "Ramirez",
       "email": "r.ramirez@email.com",
       "departamento": "recursos humanos"
+    },
+    {
+      "id": 4,
+      "nombre": "Andres",
+      "apellido": "Conde",
+      "email": "a@a.com",
+      "departamento": "polo norte"
     }
   ]
 }
