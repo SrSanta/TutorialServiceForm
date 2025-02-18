@@ -30,13 +30,13 @@ export class ListadoComponent {
     });
   }
 
-  getEvento(id: number) {
+  getEvento(id: string) {
     this.eventosService.getEvento(id).subscribe((evento) => {
       console.log(evento);
     });
   }
 
-  eliminarDato(id: number) {
+  eliminarDato(id: string) {
     this.eventosService.getEvento(id).subscribe((evento) => {
       if (evento.categoria === 'log') {
         this.observableService.deleteLog();

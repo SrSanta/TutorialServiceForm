@@ -72,7 +72,7 @@ export class FormularioComponent {
       const now = new Date();
 
       const nuevoRegistro: Evento = {
-        id: this.eventos.length + 1,
+        id: (this.eventos.length + 1).toString(),
         empleadoNombre: this.form.value.empleado,
         nombre: this.form.value.nombre,
         descripcion: this.form.value.descripcion,

@@ -8,6 +8,15 @@
       "categoria": "error",
       "fecha": "2025-02-27",
       "creacion": "2025-02-18T12:26:40.428Z"
+    },
+    {
+      "id": "2",
+      "empleadoNombre": "Ramon",
+      "nombre": "a",
+      "descripcion": "a",
+      "categoria": "warn",
+      "fecha": "2025-02-19",
+      "creacion": "2025-02-18T13:10:07.037Z"
     }
   ],
   "empleados": [
