@@ -41,7 +41,7 @@ export class FormularioEmpleadoComponent {
 
   submit() {
     const nuevoEmpleado: Empleado = {
-      id: (this.empleados.length + 1).toString(),
+      id: (Number(this.empleados[this.empleados.length - 1].id) + 1).toString(),
       nombre: this.formEmp.value.nombre,
       apellido: this.formEmp.value.apellido,
       email: this.formEmp.value.email,
