@@ -3,6 +3,7 @@ import { EventosService } from '../../services/eventos.service';
 import { Evento } from '../../models/evento.model';
 import { EmpleadosService } from '../../services/empleado.service';
 import { ObservablesService } from '../../services/observables.service';
+import { get } from 'node:http';
 
 @Component({
   selector: 'app-listado',
@@ -32,6 +33,24 @@ export class ListadoComponent {
   getEvento(id: number) {
     this.eventosService.getEvento(id).subscribe((evento) => {
       console.log(evento);
+    });
+  }
+
+  eliminarDato(id: number) {
+    this.eventosService.getEvento(id).subscribe((evento) => {
+      if (evento.categoria === 'log') {
+        this.observableService.deleteLog();
+      }
+      if (evento.categoria === 'error') {
+        this.observableService.deleteError();
+      }
+      if (evento.categoria === 'warn') {
+        this.observableService.deleteWarm();
+      }
+    });
+
+    this.eventosService.deleteEvento(id).subscribe(() => {
+      this.getEventosAll();
     });
   }
 

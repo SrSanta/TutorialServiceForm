@@ -16,6 +16,7 @@
           <th>Descripción</th>
           <th>Fecha</th>
           <th>Fecha Creacion</th>
+          <th>Acciones</th>
         </tr>
       </thead>
       <tbody class="table-light">
@@ -37,6 +38,9 @@
           <td>{{ evento.descripcion }}</td>
           <td>{{ evento.fecha }}</td>
           <td>{{ evento.creacion }}</td>
+          <td>
+            <a class="btn btn-danger btn-sm" (click)="eliminarDato(evento.id)">Eliminar</a>
+          </td>
         </tr>
         }
       </tbody>

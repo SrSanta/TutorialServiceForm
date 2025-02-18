@@ -59,6 +59,21 @@ export class ObservablesService {
         this.showCounts();
     }
 
+    deleteLog() {
+        this.countLog.next(this.countLog.value - 1);
+        this.showCounts();
+    }
+
+    deleteError() {
+        this.countError.next(this.countError.value - 1);
+        this.showCounts();
+    }
+
+    deleteWarm() {
+        this.countWarn.next(this.countWarn.value - 1);
+        this.showCounts();
+    }
+
     showCounts() {
         console.log(this.countLog.value, this.countWarn.value, this.countError.value);
     }
