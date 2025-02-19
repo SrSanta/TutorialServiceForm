@@ -3,7 +3,6 @@ import { EmpleadosService } from '../../services/empleado.service';
 import { Empleado } from '../../models/persona.model';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import e from 'express';
 
 @Component({
   selector: 'app-formulario-empleado',

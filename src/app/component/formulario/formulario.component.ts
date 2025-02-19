@@ -19,6 +19,7 @@ export class FormularioComponent {
   eventos: Evento[] = [];
   form: FormGroup;
   nombre: string = '';
+  formData = JSON.parse(localStorage.getItem("formData") ?? "{}");
 
   constructor(private empleadosService: EmpleadosService, private eventosService: EventosService, private fb: FormBuilder, private observablesService: ObservablesService) {
     this.form = this.fb.group({
@@ -29,6 +30,10 @@ export class FormularioComponent {
       fecha: ['', [Validators.required]],
       creacion: [new Date()]
     });
+
+    if (localStorage.getItem("formData")) {
+      this.form.setValue(JSON.parse(localStorage.getItem("formData") ?? "{}"));
+    }
   }
 
   ngOnInit(): void {
@@ -97,5 +102,9 @@ export class FormularioComponent {
     } else {
       alert('Rellene todos los campos');
     }
+  }
+
+  guardarFormularioActual(){
+    localStorage.setItem("formData", JSON.stringify(this.form.value));
   }
 }

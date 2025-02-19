@@ -1,4 +1,4 @@
-<form [formGroup]="form" (submit)="submit()" class="container mt-5 p-4 bg-white shadow rounded">
+<form [formGroup]="form" (submit)="submit()" (change)="guardarFormularioActual()" class="container mt-5 p-4 bg-white shadow rounded">
   <h2 class="mb-4 text-center text-primary">Registro de Eventos - {{ nombre }}</h2>
 
   <div class="row justify-content-center">
